@@ -1,0 +1,6 @@
+x = range(0,10,2)
+y = range(0,5)
+z = range(5)
+print('x =',list(x))
+print('y =',list(y))
+print('z =',list(z))
