@@ -13,7 +13,7 @@ def abm2(f,t0,tf,y0,n):
         yp = y[i] + (3.0/2.0) * h * f(t[i],y[i]) - 0.5 * h * f(t[i-1],y[i-1])
         t[i+1] = t[i] + h
         y[i+1] = y[i] + 0.5 * h * (f(t[i+1],yp) + f(t[i],y[i]))
-    return y
+    return t,y
 
 # Define functions
 def f(t,y): 
@@ -26,7 +26,7 @@ y0 = 1.0
 n = 5
 
 # Execute ABM2
-yabm2 = abm2(f,t0,tf,y0,n)
+t,yabm2 = abm2(f,t0,tf,y0,n)
 
 # Print results
 print("%5s %8s" % ('t','y'))
